@@ -15,9 +15,8 @@
         <div class="font-semibold text-xl">AES Encryptor</div>
         <nav class="flex space-x-24">
           <a href="#" class="hover:text-blue-500 transition-colors">Home</a>
-          <a href="#informasi" class="hover:text-blue-500 transition-colors"
-            >Informasi</a
-          >
+          <a href="#" class="hover:text-blue-500 transition-colors">About</a>
+          <a href="#" class="hover:text-blue-500 transition-colors">Contact</a>
         </nav>
       </div>
     </header>
@@ -33,7 +32,7 @@
       >
         <!-- Encrypt Card Header -->
         <div class="bg-blue-100 px-6 py-4 border-b border-blue-200">
-          <h3 class="font-medium text-lg">Encrypt Password</h3>
+          <h3 class="font-medium text-lg">Enter Your Master Key</h3>
         </div>
 
         <!-- Encrypt Card Content -->
@@ -44,58 +43,40 @@
             >
             <input
               type="password"
-              id="encryptKey"
+              id="key"
               class="w-full px-4 py-2 border border-blue-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
-              placeholder="Enter encryption key"
+              placeholder="Enter key"
             />
           </div>
 
           <div class="mb-4">
             <label class="block text-sm font-medium text-gray-700 mb-1"
-              >Password to Encrypt</label
+              >Input password</label
             >
             <input
               type="password"
-              id="passwordToEncrypt"
+              id="password"
               class="w-full px-4 py-2 border border-blue-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
-              placeholder="Enter password"
+              placeholder="Enter Password"
             />
           </div>
 
           <button
-            id="encryptBtn"
             class="w-1/4 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2"
           >
             Encrypt
           </button>
-
-          <!-- Result Section -->
-          <div id="encryptResultContainer" class="mt-4 hidden">
-            <label class="block text-sm font-medium text-gray-700 mb-1"
-              >Encrypted Result</label
-            >
-            <div
-              class="p-3 bg-gray-50 rounded-md border border-gray-200 break-all"
-              id="encryptedResult"
-            ></div>
-            <button
-              id="copyEncryptBtn"
-              class="mt-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-1 px-3 rounded-md text-sm transition-colors"
-            >
-              Copy to Clipboard
-            </button>
-          </div>
         </div>
       </div>
       <!-- /Encrypt Card -->
 
       <!-- Decrypt Card -->
       <div
-        class="w-full max-w-3/4 bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1 mt-6"
+        class="w-full max-w-3/4 bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1"
       >
         <!-- Decrypt Card Header -->
-        <div class="bg-green-100 px-6 py-4 border-b border-green-200">
-          <h3 class="font-medium text-lg">Decrypt Password</h3>
+        <div class="bg-blue-100 px-6 py-4 border-b border-blue-200">
+          <h3 class="font-medium text-lg">Enter Your Master Key</h3>
         </div>
 
         <!-- Decrypt Card Content -->
@@ -106,53 +87,35 @@
             >
             <input
               type="password"
-              id="decryptKey"
+              id="key"
               class="w-full px-4 py-2 border border-blue-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
-              placeholder="Enter decryption key"
+              placeholder="Enter key"
             />
           </div>
 
           <div class="mb-4">
             <label class="block text-sm font-medium text-gray-700 mb-1"
-              >Encrypted Password</label
+              >Input password</label
             >
-            <textarea
-              id="encryptedPassword"
+            <input
+              type="password"
+              id="password"
               class="w-full px-4 py-2 border border-blue-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
-              placeholder="Paste encrypted password"
-              rows="3"
-            ></textarea>
+              placeholder="Enter Password"
+            />
           </div>
 
           <button
-            id="decryptBtn"
-            class="w-1/4 bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2"
+            class="w-1/4 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2"
           >
             Decrypt
           </button>
-
-          <!-- Result Section -->
-          <div id="decryptResultContainer" class="mt-4 hidden">
-            <label class="block text-sm font-medium text-gray-700 mb-1"
-              >Decrypted Result</label
-            >
-            <div
-              class="p-3 bg-gray-50 rounded-md border border-gray-200 break-all"
-              id="decryptedResult"
-            ></div>
-            <button
-              id="copyDecryptBtn"
-              class="mt-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-1 px-3 rounded-md text-sm transition-colors"
-            >
-              Copy to Clipboard
-            </button>
-          </div>
         </div>
       </div>
       <!-- /Decrypt Card -->
     </section>
 
-    <section id="informasi" class="mb-52">
+    <section>
       <h2 class="text-3xl font-bold text-center my-10">Informasi</h2>
 
       <div class="px-32 my-5 space-y-4">
@@ -163,9 +126,7 @@
             class="w-full bg-blue-100 px-6 py-4 border-b border-blue-200 flex justify-between items-center focus:outline-none"
             onclick="toggleAccordion(this)"
           >
-            <h3 class="font-medium text-lg text-left">
-              Library apa yang digunakan untuk metode enkripsinya?
-            </h3>
+            <h3 class="font-medium text-lg text-left">❓ Master Password</h3>
             <svg
               class="w-5 h-5 transform transition-transform"
               fill="none"
@@ -184,10 +145,11 @@
           <!-- Accordion Content -->
           <div class="p-6 hidden">
             <p>
-              Kami menggunakan CryptoJS, sebuah library JavaScript yang
-              menyediakan berbagai algoritma kriptografi, termasuk AES (Advanced
-              Encryption Standard). Library ini ringan, mudah diintegrasikan,
-              dan cukup aman untuk enkripsi di sisi klien (frontend).
+              Master password adalah kata sandi utama yang digunakan untuk
+              mengakses semua data akun dan password yang tersimpan di aplikasi
+              pengelola kata sandi. Tanpa master password, pengguna tidak dapat
+              membuka atau melihat data apa pun, karena semua data telah
+              diamankan.
             </p>
           </div>
         </div>
@@ -200,7 +162,7 @@
             onclick="toggleAccordion(this)"
           >
             <h3 class="font-medium text-lg text-left">
-              Kenapa memilih AES untuk enkripsi password?
+              🔐 Bagaimana password kamu dapat dienkripsi?
             </h3>
             <svg
               class="w-5 h-5 transform transition-transform"
@@ -220,11 +182,15 @@
           <!-- Accordion Content -->
           <div class="p-6 hidden">
             <p>
-              AES (Advanced Encryption Standard) adalah standar enkripsi yang
-              diakui secara global dan digunakan oleh pemerintah & perusahaan
-              keamanan. AES menggunakan kunci yang sama untuk enkripsi &
-              dekripsi, sehingga prosesnya efisien. AES juga tahan terhadap
-              serangan brute-force (jika kata kunci cukup kuat).
+              Password yang kamu simpan akan dienkripsi menggunakan algoritma
+              enkripsi seperti AES (Advanced Encryption Standard). Proses
+              enkripsi ini mengubah password asli menjadi kode acak yang tidak
+              bisa dibaca langsung, kecuali dengan master password sebagai kunci
+              untuk mendekripsinya. <br />
+              <br />
+              Contohnya: <br />
+              Password asli: admin123 <br />
+              Setelah dienkripsi: U2FsdGVkX1+bYT7HnJ+9Kjz3x9bdL+LoX==
             </p>
           </div>
         </div>
@@ -237,7 +203,7 @@
             onclick="toggleAccordion(this)"
           >
             <h3 class="font-medium text-lg text-left">
-              Apakah data yang dikirim aman?
+              👀 Bagaimana cara mengetahui password kamu yang telah dienkripsi?
             </h3>
             <svg
               class="w-5 h-5 transform transition-transform"
@@ -257,16 +223,19 @@
           <!-- Accordion Content -->
           <div class="p-6 hidden">
             <p>
-              Data hanya diproses di browser dan tidak dikirim ke server mana
-              pun. Setelah halaman dimuat ulang, data hilang dari memori. <br />
-              Jika ada malware/keylogger di perangkat, master key bisa dicuri.
+              Kamu tidak bisa langsung mengetahui password asli dari hasil
+              enkripsi, karena data sudah dikunci. Namun, saat kamu memasukkan
+              master password yang benar, sistem akan mendekripsi data dan
+              menampilkan kembali password aslinya untuk kamu lihat.<br />
+              <br />
+              Jika master password salah, maka password yang terenkripsi tidak
+              bisa dibuka — seperti membuka brankas dengan kunci yang salah.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="accordion.js"></script>
     <script src="encryption.js"></script>
   </body>
